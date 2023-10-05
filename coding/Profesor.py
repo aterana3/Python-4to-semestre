@@ -4,10 +4,9 @@ from coding.Acta import Acta
 
 class Profesor(IUsuario):
 
-    def __init__(self, nombre, apellido, cedula):
+    def __init__(self, nombre, apellido):
         self.nombre = nombre
         self.apellido = apellido
-        self.cedula = cedula
 
     def getNombre(self):
         return self.nombre
