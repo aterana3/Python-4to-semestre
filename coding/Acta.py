@@ -11,5 +11,3 @@ class Acta:
         for estudiante in curso.estudiantes:
             detActa = DetActa(estudiante)
             print(detActa.mostrarDatos())
-
-    #Este es un mensaje de prueba
