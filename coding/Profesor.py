@@ -22,3 +22,5 @@ class Profesor(IUsuario):
     def generarActa(self):
         acta = Acta(self)
         acta.imprimir()
+
+    #Hola este es un documento de prueba
