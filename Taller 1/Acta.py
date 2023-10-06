@@ -2,7 +2,8 @@ from DetActa import DetActa
 
 class Acta:
 
-    def __init__(self, curso):
+    def __init__(self, id, curso):
+        self.id = id
         self.curso = curso
 
     def imprimir(self):
@@ -13,5 +14,5 @@ class Acta:
         print("------------------------------------")
         print("Estudiantes: ")
         for estudiante in self.curso.getEstudiantes():
-            detActa = DetActa(estudiante)
+            detActa = DetActa(self.id, estudiante)
             print(detActa.mostrarDatos())

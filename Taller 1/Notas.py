@@ -1,6 +1,7 @@
 class Notas:
 
-    def __init__(self, n1 = 0, n2 = 0, ex1 = 0, n3 = 0, n4 = 0, ex2 = 0):
+    def __init__(self, id, n1 = 0, n2 = 0, ex1 = 0, n3 = 0, n4 = 0, ex2 = 0):
+        self.id = id
         self.n1 = n1
         self.n2 = n2
         self.ex1 = ex1

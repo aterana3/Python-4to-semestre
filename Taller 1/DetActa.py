@@ -1,8 +1,11 @@
-
-
 class DetActa:
 
-    def __init__(self, estudiante):
+    _secuencia = 0
+
+    def __init__(self, id_acta, estudiante):
+        DetActa._secuencia += 1
+        self.id = DetActa._secuencia
+        self.id_acta = id_acta
         self.estudiante = estudiante
     
     def mostrarDatos(self):

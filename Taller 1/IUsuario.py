@@ -1,16 +1,19 @@
-from abc import ABC, abstractmethod
 
+class IUsuario:
 
-class IUsuario(ABC):
+    def __init__(self, id, nombre, apellido):
+        self.id = id
+        self.nombre = nombre
+        self.apellido = apellido
+        
+    def getId(self):
+        pass
 
-    @abstractmethod
     def getNombre(self):
         pass
 
-    @abstractmethod
     def getApellido(self):
         pass
 
-    @abstractmethod
     def mostrarDatos(self):
         pass
