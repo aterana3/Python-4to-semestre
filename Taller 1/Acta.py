@@ -2,8 +2,11 @@ from DetActa import DetActa
 
 class Acta:
 
-    def __init__(self, id, curso):
-        self.id = id
+    _secuencia = 0
+
+    def __init__(self, curso):
+        Acta._secuencia += 1
+        self.id = Acta._secuencia
         self.curso = curso
 
     def imprimir(self):

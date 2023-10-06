@@ -2,7 +2,11 @@ from Acta import Acta
 
 class Curso:
 
+    _secuencia = 0
+
     def __init__(self, nombre, profesor, estudiantes):
+        Curso._secuencia += 1
+        self.id = Curso._secuencia
         self.nombre = nombre
         self.profesor = profesor
         self.estudiantes = estudiantes
