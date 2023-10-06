@@ -75,16 +75,11 @@
                 <mxCell id="62" value="+ mostrarDatos(): String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="27" vertex="1">
                     <mxGeometry y="120" width="160" height="26" as="geometry"/>
                 </mxCell>
-                <mxCell id="S366DDgQKdQxfufuKKNa-86" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;startArrow=none;startFill=0;endArrow=diamond;endFill=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="43" target="27" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="690" y="490" as="targetPoint"/>
-                        <Array as="points">
-                            <mxPoint x="680" y="490"/>
-                        </Array>
-                    </mxGeometry>
+                <mxCell id="69" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;endArrow=diamond;endFill=1;" edge="1" parent="1" source="43" target="62">
+                    <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="43" value="Notas" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
-                    <mxGeometry x="600" y="510" width="160" height="218" as="geometry"/>
+                    <mxGeometry x="600" y="600" width="160" height="218" as="geometry"/>
                 </mxCell>
                 <mxCell id="44" value="- id : Integer&#10;- nombre : String&#10;- calificacion : Integer" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="43" vertex="1">
                     <mxGeometry y="26" width="160" height="54" as="geometry"/>
