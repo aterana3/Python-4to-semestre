@@ -1,5 +1,4 @@
-from coding.DetActa import DetActa
-
+from DetActa import DetActa
 
 class Acta:
 
@@ -7,6 +6,12 @@ class Acta:
         self.curso = curso
 
     def imprimir(self):
+        print("Acta de Notas")
+        print("------------------------------------")
+        print("Curso: " + self.curso.getNombre())
+        print("Profesor: " + self.curso.getProfesor().mostrarDatos())
+        print("------------------------------------")
+        print("Estudiantes: ")
         for estudiante in self.curso.getEstudiantes():
             detActa = DetActa(estudiante)
             print(detActa.mostrarDatos())

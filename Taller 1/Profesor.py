@@ -1,6 +1,4 @@
-import IUsuario
-from coding.Acta import Acta
-
+from IUsuario import IUsuario
 
 class Profesor(IUsuario):
 

@@ -1,3 +1,5 @@
+from Acta import Acta
+
 class Curso:
 
     def __init__(self, nombre, profesor, estudiantes):
@@ -15,5 +17,6 @@ class Curso:
         return self.estudiantes
     
     def generarActa(self):
+
         acta = Acta(self)
         acta.imprimir()

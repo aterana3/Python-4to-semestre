@@ -1,5 +1,4 @@
-import IUsuario
-
+from IUsuario import IUsuario
 
 class Estudiante(IUsuario):
 
@@ -13,6 +12,9 @@ class Estudiante(IUsuario):
 
     def getApellido(self):
         return self.apellido
+    
+    def getNotas(self):
+        return self.notas
 
     def mostrarDatos(self):
-        return "Nombre: " + self.nombre + " " + self.apellido
+        return "Nombre: " + self.nombre + " " + self.apellido + " |" + self.notas.mostrarDatos() 

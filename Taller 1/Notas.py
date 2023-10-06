@@ -1,24 +1,18 @@
 class Notas:
 
-    def __init__(self):
-        self.notas = {
-            'n1': 0,
-            'n2': 0,
-            'ex1': 0,
-            'n3': 0,
-            'n4': 0,
-            'ex2': 0
-        }
-
-    def asignarNota(self):
-        for nota in self.notas:
-            self.notas[nota] = int(input(f"Ingrese la nota {nota}: "))
+    def __init__(self, n1 = 0, n2 = 0, ex1 = 0, n3 = 0, n4 = 0, ex2 = 0):
+        self.n1 = n1
+        self.n2 = n2
+        self.ex1 = ex1
+        self.n3 = n3
+        self.n4 =  n4
+        self.ex2 = ex2
     
     def promedio1(self):
-        return self.notas['n1'] + self.notas['n2'] + self.notas['ex1']
+        return self.n1 + self.n2 + self.ex1
 
     def promedio2(self):
-        return self.notas['n3'] + self.notas['n4'] + self.notas['ex2']
+        return self.n3 + self.n4 + self.ex2
 
     def nota_final(self):
         return self.promedio1() + self.promedio2()
@@ -27,15 +21,4 @@ class Notas:
         return "Aprobado" if self.nota_final() >= 70 else "Reprobado"
 
     def mostrarDatos(self):
-        return f"""
-        Nota 1: {self.notas['n1']}
-        Nota 2: {self.notas['n2']}
-        Examen 1: {self.notas['ex1']}
-        Nota 3: {self.notas['n3']}
-        Nota 4: {self.notas['n4']}
-        Examen 2: {self.notas['ex2']}
-        Promedio 1: {self.promedio1()}
-        Promedio 2: {self.promedio2()}
-        Nota Final: {self.nota_final()}
-        Estado: {self.estado()}
-        """
+        return f"N1: {self.n1} | N2: {self.n2} | EX1: {self.ex1}| N3: {self.n3} | N4: {self.n4} | EX2: {self.ex2} | NF: {self.nota_final()}| Estado {self.estado()}"
