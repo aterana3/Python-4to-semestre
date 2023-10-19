@@ -1,0 +1,14 @@
+{
+    "profesor": {
+        "nombre": "Daniel Alexander",
+        "apellido": "Vera Paredes"
+    },
+    "nota_1": {
+        "nota": "15, 15, 20, 10, 10, 15",
+        "estudiante": {
+            "nombre": "Juan",
+            "apellido": "Perez"
+        }
+    },
+    "curso": "software A1"
+}
