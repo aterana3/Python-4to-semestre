@@ -103,6 +103,7 @@ class Asignatura:
         self.nombre_para = nombre_para
         self.nombre_prof = nombre_prof
         self.estudiantes = estudiantes
+        self.fecha_acta = datetime.now().strftime("%d/%m/%Y")
         
     def getId(self):
         return self.id
@@ -133,7 +134,7 @@ class Asignatura:
     
     def generarActa(self):
         print("UNEMI")
-        print(f"Acta de calificaciones - ")
+        print(f"Acta de calificaciones - {self.fecha_acta}")
         print("----------------------------------------")
         print(f"Facultad: {self.nombre_facu}")
         print(f"Carrera: {self.nombre_carre}")
@@ -161,7 +162,6 @@ class Asignatura:
                             print(f"{nota['n1']} | {nota['n2']} | {nota['ex1']} | {nota['n3']} | {nota['n4']} | {nota['ex2']} | {nota['nota_final']} | {nota['estado']}")
                         
                     
-                       
 class Profesor:
 
     _secuencia = len(json.load(open(lista_archivos['profesor'], 'r'))) if lista_archivos['profesor'].exists() else 0
