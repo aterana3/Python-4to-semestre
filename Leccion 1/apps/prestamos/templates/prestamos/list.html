@@ -1,0 +1,71 @@
+{% extends "components/base_list.html" %}
+{% load static%}
+{% block search %}
+   <form action="" style="max-width: 450px;">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Buscar" name="q1" value="{{ request.GET.q1 }}">
+            <button class="btn btn-outline-danger" data-bs-toggle="tooltip" data-bs-title="Escriba y click en buscar">
+                Buscar
+            </button>
+        </div>
+    </form>
+{% endblock search %}
+{% block columns %}
+    <tr class="text-primary"> 
+        <th class="text-primary">Fecha del prestamo</th>
+        <th class="text-primary">Cliente</th>
+        <th class="text-primary">Valor del prestamo</th>
+        <th class="text-primary">Fecha de descuento</th>
+        <th class="text-primary">Numero de cuotas</th>
+        <th class="text-primary">Cuotas</th>
+        <th class="text-primary">Estado</th>
+        <th class="text-danger">Acciones</th>
+    </tr>
+{% endblock %}
+
+{% block rows %}
+    {% for prestamo in prestamos %}
+        <tr class="{% cycle 'table-default' 'table-secondary' %}">
+            <td class="text-center">{{prestamo.fecha_prestamo}}</td>
+            <td class="text-center">{{prestamo.cliente }}</td>
+            <td class="text-center">{{prestamo.valor_prestamo }}</td>
+            <td class="text-center">{{prestamo.fecha_inicio_descuento }}</td>
+            <td class="text-center">{{prestamo.numero_cuotas }}</td>
+            <td class="text-center">{{prestamo.cuotas }}</td>
+            </td>
+            <td class="text-center">{{prestamo.estado }}</td>
+            <td class="text-center ">
+                <a class="text-success" href="{% url 'prestamos:prestamo_update' prestamo.id %}" data-bs-toggle="tooltip" data-bs-title="Editar el prestamo"><i class="bi bi-pencil-fill"></i></a>
+                <a class="text-danger" href="{% url 'prestamos:prestamo_delete' prestamo.id %}" data-bs-toggle="tooltip" data-bs-title="Eliminar el prestamo"><i class="bi bi-x-circle-fill"></i></a>
+                <a href="#" class="text-primary" data-bs-toggle="modal" data-bs-target="#prestamoModal{{ prestamo.id }}"><i class="bi bi-file-post"></i></a>
+            </td>
+        </tr>
+        {% block popUp %}
+        <div class="modal fade" id="prestamoModal{{ prestamo.id }}" tabindex="-1" aria-labelledby="prestamoModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="prestamoModalLabel">Detalles del Préstamo</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Fecha de Préstamo: {{ prestamo.fecha_prestamo }}</p>
+                        <p>Cliente: {{ prestamo.cliente }}</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endblock %}
+        {% empty %}
+        <tr>
+          <td colspan="14" class="text-danger fw-bold h3 text-center">
+            <div class="py-2 mt-2 border border-1 shadow rounded text-center bg-light">
+              ¡No se encontraron datos que cumplan los criterios de búsqueda...!
+            </div>
+          </td>
+        </tr>
+    {% endfor%}  
+{% endblock %}

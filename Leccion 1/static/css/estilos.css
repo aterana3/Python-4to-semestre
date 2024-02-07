@@ -1,0 +1,53 @@
+.body {
+  min-height: 100vh;
+}
+
+.tooltip-inner {
+  color: whitesmoke;
+}
+
+.tooltip-arrow::before {
+  background-color: black;
+}
+
+.tooltip-inner {
+  background-color: rgb(93, 93, 148)
+}
+
+#content-wrapper {
+  min-height: 100vh;
+}
+
+.sidebar .sidebar-brand {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 800;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  z-index: 1;
+}
+
+.circular-image {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+
+#profile-image-container {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+.profile-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.username {
+  font-weight: bold; 
+}
